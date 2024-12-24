@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Stopwatch</title>
+    <link rel="stylesheet" href="./stopwatch.css" />
+    
+</head>
+<body>
+    <div class="stopwatch">
+        <div class="live-date-time" id="liveDateTime"></div>
+        <div class="time-display" id="timeDisplay">00:00:00.00</div>
+        <div class="buttons">
+            <button id="startPauseButton">Start</button>
+            <button id="resetButton">Reset</button>
+            <button id="lapButton">Lap</button>
+        </div>
+        <div class="lap-times" id="lapTimes">
+            <h3>Lap Times</h3>
+            <ul></ul>
+        </div>
+    </div>
+
+    <script src="./stopwatch.js"></script>
+</body>
+</html>

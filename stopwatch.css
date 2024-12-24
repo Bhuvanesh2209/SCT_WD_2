@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+    50% { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+    100% { background: linear-gradient(135deg, #fad0c4, #ffd1ff); }
+}
+
+.stopwatch {
+    text-align: center;
+    background: rgba(244, 251, 250, 0.644);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.time-display {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.live-date-time {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button#startPauseButton {
+    background-color: #4caf50;
+    color: white;
+}
+
+button#resetButton {
+    background-color: #f44336e7;
+    color: white;
+}
+
+button#lapButton {
+    background-color: #2196f3;
+    color: white;
+}
+
+.lap-times {
+    margin-top: 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.lap-times ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lap-times li {
+    background: rgba(255, 255, 255, 0);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
